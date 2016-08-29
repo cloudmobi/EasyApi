@@ -36,11 +36,8 @@ GET
 | keywords | 字符串 | 选填 | 搜索关键词字符串 |
 | idfa | 字符串 | 选填 | 设备IDFA |
 | imei | 字符串 | 选填 | 设备IMEI |
-| ip | 字符串 | 选填 | 当前用户IP |
 | icc | 字符串 | 选填 | ISO country code SIM卡国家代码  Android: TelephonyManager.getNetworkCountryIso()  iOS: [[NSLocale  currentLocale] objectForKey:NSLocaleCountryCode]; |
 | gp | 整型 | 选填 | 1:已安装google play 2:未安装google play |
-| dmf | 字符串 | 选填 | 设备制造厂商 |
-| dml | 字符串 | 选填 | 设备型号 |
 | dpd | 字符串 | 选填 | Device product |
 | cn | 字符串 | 选填 | Carrier name 运营商名称 |
 | la | 浮点数 | 选填 | 纬度 |
