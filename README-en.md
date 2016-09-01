@@ -67,8 +67,11 @@ Ad Object
 | imp_tks | array of string | optional | impression monitor |
 | clk_tks | array of string | optional | click monitor |
 | icon | string | required | icon |
-| title | string | required | title |
-| image | string | required | image |
+| icon_size | string | required | size of icon, format: "${width}x${height}", eg: "1x1" |
+| title | string | required | title(app name) |
+| pkg_name | string | required | package name |
+| image | string | required | image source of creative |
+| image_size | string | required | size of creative picture, format: "${width}x${height}", eg: "300x250" |
 | desc | string | required | ad description |
 
 
@@ -89,9 +92,12 @@ JSON Response Demo
             "clk_url": "https://github.com",
             "imp_tks": ["imp_tk1", "imp_tk2"],
             "clk_tks": ["clk_tk1", "clk_tk2"],
+            "pkg_name": "net.cloudmobi.www",
             "icon": "http://www.matatransit.com/uploadedImages/Main_Site/Content/Maps_and_Schedules/Route_Schedules/route%2042%20icon.jpg",
+            "icon_size": "1x1",
             "title": "Answer",
             "image": "http://steven-universe.wikia.com/wiki/File:42_Answer.jpg",
+            "image_size": "300x250",
             "desc": "Welcome to use http://www.cloudmobi.net",
             "button": "Install"
         }

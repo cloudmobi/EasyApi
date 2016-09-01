@@ -69,8 +69,11 @@ GET
 | imp_tks | 字符串数组 | 否 | 曝光监测链接(自己的监测) |
 | clk_tks | 字符串数组 | 否 | 点击监测链接(自己的监测) |
 | icon | string | 是 | 广告图标 |
-| title | string | 是 | 广告标题 |
+| icon_size | string | 是 | 图标尺寸, 格式: "${width}x${height}", eg: "1x1" |
+| title | string | 是 | 广告标题(app名称) |
+| pkg_name | string | 是 | 包名 |
 | image | string | 是 | 广告图片 |
+| image_size | string | 是 | 素材尺寸，格式: "${width}x${height}", eg: "300x250" |
 | desc | string | 是 | 广告说明，大段文字 |
 
 
@@ -91,9 +94,12 @@ JSON回复示例
             "clk_url": "https://github.com",
             "imp_tks": ["imp_tk1", "imp_tk2"],
             "clk_tks": ["clk_tk1", "clk_tk2"],
+            "pkg_name": "net.cloudmobi.www",
             "icon": "http://www.matatransit.com/uploadedImages/Main_Site/Content/Maps_and_Schedules/Route_Schedules/route%2042%20icon.jpg",
+            "icon_size": "1x1",
             "title": "Answer",
             "image": "http://steven-universe.wikia.com/wiki/File:42_Answer.jpg",
+            "image_size": "300x250",
             "desc": "Welcome to use http://www.cloudmobi.net",
             "button": "Install"
         }
