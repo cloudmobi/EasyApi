@@ -13,7 +13,7 @@ URI: `http://api.cloudmobi.net:30001/api/v1/realtime/get`
 
 HTTP方法: `GET`
 
-请求参数
+请求参数:
 
 | **字段名** | **类型** | **是否必填** | **字段含义** |
 |:--:|:--:|:--:|:--:|
@@ -23,11 +23,11 @@ HTTP方法: `GET`
 | dt | 字符串 | 必填 | 设备类型 可选值：phone,tablet,ipad,watch |
 | nt | 整型 | 必填 | 网络类型 Android: NetworkInfo.getType()  iOS: [[dataNetWorkItemView valueForKey:@"dataNetworkType"] integerValue] |
 | clip | 字符串 | 必填 | 客户端ip |
-| imgw | 整型 | 必填 | 表示需要的图片素材的宽(单位 像素) 缺省值为广告位的宽 |
-| imgh | 整型 | 必填 | 表示需要的图片素材的高(单位 像素) 缺省值为广告位的高 |
+| imgw | 整型 | 必填 | 表示需要的图片素材的宽（单位：像素）缺省值为广告位的宽 |
+| imgh | 整型 | 必填 | 表示需要的图片素材的高（单位：像素）缺省值为广告位的高 |
 | pn | 字符串 | 必填 | 当前宿主包名 |
 | sv | 字符串 | 必填 | SDK版本号 |
-| adnum | 整型 | 选填 | 期望adlist返回的广告数，默认为1 |
+| adnum | 整型 | 选填 | 期望ad_list返回的广告数，默认为1 |
 | gaid | 字符串 | 选填 | Google Advertising Id（注：如能获取，尽量填上，不填对广告转化影响很大） |
 | aid | 字符串 | 选填 | 设备Android ID（注：如能获取，尽量填上，不填对广告转化影响很大）|
 | idfa | 字符串 | 选填 | 设备IDFA（注：如能获取，尽量填上，不填对广告转化影响很大） |
@@ -51,7 +51,7 @@ URI: `http://api.cloudmobi.net:30001/api/v1/realtime/m/get`
 
 HTTP方法: `GET`
 
-请求参数
+请求参数:
 
 | **字段名** | **类型** | **是否必填** | **字段含义** |
 |:--:|:--:|:--:|:--:|
@@ -60,11 +60,11 @@ HTTP方法: `GET`
 | osv | 浮点 | 必填 | Android: Build.VERSION.SDK, iOS: [[[UIDevice currentDevice] systemVersion] floatValue]; |
 | dt | 字符串 | 必填 | 设备类型 可选值：phone,tablet,ipad,watch |
 | nt | 整型 | 必填 | 网络类型 Android: NetworkInfo.getType()  iOS: [[dataNetWorkItemView valueForKey:@"dataNetworkType"] integerValue] |
-| imgw | 整型 | 必填 | 表示需要的图片素材的宽(单位 像素) 缺省值为广告位的宽 |
-| imgh | 整型 | 必填 | 表示需要的图片素材的高(单位 像素) 缺省值为广告位的高 |
+| imgw | 整型 | 必填 | 表示需要的图片素材的宽（单位：像素）缺省值为广告位的宽 |
+| imgh | 整型 | 必填 | 表示需要的图片素材的高（单位：像素）缺省值为广告位的高 |
 | pn | 字符串 | 必填 | 当前宿主包名 |
 | sv | 字符串 | 必填 | SDK版本号 |
-| adnum | 整型 | 选填 | 期望adlist返回的广告数，默认为1 |
+| adnum | 整型 | 选填 | 期望ad_list返回的广告数，默认为1 |
 | gaid | 字符串 | 选填 | Google Advertising Id（注：如能获取，尽量填上，不填对广告转化影响很大） |
 | aid | 字符串 | 选填 | 设备Android ID（注：如能获取，尽量填上，不填对广告转化影响很大）|
 | idfa | 字符串 | 选填 | 设备IDFA（注：如能获取，尽量填上，不填对广告转化影响很大） |
@@ -116,11 +116,11 @@ API请求示例
 
 * Server2Server API:
 
-`http://api.cloudmobi.net:30001/api/v1/realtime/get?gaid=xxx&os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifi&sv=sv&clip=52.77.232.84&isdebug=1`
+        http://api.cloudmobi.net:30001/api/v1/realtime/get?gaid=xxx&os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifi&sv=sv&clip=52.77.232.84&isdebug=1
 
 * Client2Server API:
 
-`http://api.cloudmobi.net:30001/api/v1/realtime/m/get?gaid=xxx&os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifi&sv=sv&isdebug=1`
+        http://api.cloudmobi.net:30001/api/v1/realtime/m/get?gaid=xxx&os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifi&sv=sv&isdebug=1
 
 JSON回复示例
 ---
