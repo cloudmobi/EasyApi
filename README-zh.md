@@ -32,6 +32,7 @@ HTTP方法: `GET`
 | aid | 字符串 | 选填 | 设备Android ID（注：如能获取，尽量填上，不填对广告转化影响很大）|
 | idfa | 字符串 | 选填 | 设备IDFA（注：如能获取，尽量填上，不填对广告转化影响很大） |
 | imei | 字符串 | 选填 | 设备IMEI |
+| ck_md5 | 字符串 | 选填 | cookie的md5值（注：gaid, aid, idfa, imei, ck_md5至少需要填一个，否则不会投放广告） |
 | keywords | 字符串 | 选填 | 搜索关键词字符串 |
 | icc | 字符串 | 选填 | ISO country code SIM卡国家代码  Android: TelephonyManager.getNetworkCountryIso()  iOS: [[NSLocale  currentLocale] objectForKey:NSLocaleCountryCode]; |
 | gp | 整型 | 选填 | 1:已安装google play, 2:未安装google play |
@@ -69,6 +70,7 @@ HTTP方法: `GET`
 | aid | 字符串 | 选填 | 设备Android ID（注：如能获取，尽量填上，不填对广告转化影响很大）|
 | idfa | 字符串 | 选填 | 设备IDFA（注：如能获取，尽量填上，不填对广告转化影响很大） |
 | imei | 字符串 | 选填 | 设备IMEI |
+| ck_md5 | 字符串 | 选填 | cookie的md5值（注：gaid, aid, idfa, imei, ck_md5至少需要填一个，否则不会投放广告） |
 | keywords | 字符串 | 选填 | 搜索关键词字符串 |
 | icc | 字符串 | 选填 | ISO country code SIM卡国家代码  Android: TelephonyManager.getNetworkCountryIso()  iOS: [[NSLocale  currentLocale] objectForKey:NSLocaleCountryCode]; |
 | gp | 整型 | 选填 | 1:已安装google play 2:未安装google play |
