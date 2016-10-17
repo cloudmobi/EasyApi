@@ -4,17 +4,14 @@ CloudTech 简易版API
 说明
 ---
 
-该API供应用后端服务调用，实时返回广告，调用者需提供IP白名单
+该API实时返回广告，提供Server2Server和Client2Server两个的API，这两类API的返回格式一样，只是在请求参数上有所不同。
 
-接口URI
+Server to server API
 ---
 
-`http://api.cloudmobi.net:30001/api/v1/realtime/get`
+URI: `http://api.cloudmobi.net:30001/api/v1/realtime/get`
 
-HTTP方法
----
-
-GET
+HTTP方法: `GET`
 
 请求参数
 ---
@@ -27,15 +24,54 @@ GET
 | dt | 字符串 | 必填 | 设备类型 可选值：phone,tablet,ipad,watch |
 | nt | 整型 | 必填 | 网络类型 Android: NetworkInfo.getType()  iOS: [[dataNetWorkItemView valueForKey:@"dataNetworkType"] integerValue] |
 | clip | 字符串 | 必填 | 客户端ip |
-| imgw | 整型 | 必填 | 表示需要的图片素材的宽(单位 像素) 缺省值为slot的宽 |
-| imgh | 整型 | 必填 | 表示需要的图片素材的高(单位 像素) 缺省值为slot的高 |
+| imgw | 整型 | 必填 | 表示需要的图片素材的宽(单位 像素) 缺省值为广告位的宽 |
+| imgh | 整型 | 必填 | 表示需要的图片素材的高(单位 像素) 缺省值为广告位的高 |
 | pn | 字符串 | 必填 | 当前宿主包名 |
 | sv | 字符串 | 必填 | SDK版本号 |
-| gaid | 字符串 | 选填 | Google Advertising Id |
-| aid | 字符串 | 选填 | 设备Android ID|
-| keywords | 字符串 | 选填 | 搜索关键词字符串 |
-| idfa | 字符串 | 选填 | 设备IDFA |
+| adnum | 整型 | 选填 | 期望adlist返回的广告数，默认为1 |
+| gaid | 字符串 | 选填 | Google Advertising Id（注：如能获取，尽量填上，不填对广告转化影响很大） |
+| aid | 字符串 | 选填 | 设备Android ID（注：如能获取，尽量填上，不填对广告转化影响很大）|
+| idfa | 字符串 | 选填 | 设备IDFA（注：如能获取，尽量填上，不填对广告转化影响很大） |
 | imei | 字符串 | 选填 | 设备IMEI |
+| keywords | 字符串 | 选填 | 搜索关键词字符串 |
+| icc | 字符串 | 选填 | ISO country code SIM卡国家代码  Android: TelephonyManager.getNetworkCountryIso()  iOS: [[NSLocale  currentLocale] objectForKey:NSLocaleCountryCode]; |
+| gp | 整型 | 选填 | 1:已安装google play, 2:未安装google play |
+| dpd | 字符串 | 选填 | Device product |
+| cn | 字符串 | 选填 | Carrier name 运营商名称 |
+| la | 浮点数 | 选填 | 纬度 |
+| lo | 浮点数 | 选填 | 经度 |
+| tz | 字符串 | 选填 | 时区 |
+| lang | 字符串 | 选填 | 当前系统语言 |
+| isdebug | 整型 | 选填 | 是否是测试流量，1表明是测试流量，0表明是线上实际流量 |
+
+
+Client 2 client API
+---
+
+URI: `http://api.cloudmobi.net:30001/api/v1/realtime/m/get`
+
+HTTP方法: `GET`
+
+请求参数
+---
+
+| **字段名** | **类型** | **是否必填** | **字段含义** |
+|:--:|:--:|:--:|:--:|
+| token | 字符串 | 必填 | 广告位标识 |
+| os | 字符串 | 必填 | 操作系统 可选值：Android,iOS |
+| osv | 浮点 | 必填 | Android: Build.VERSION.SDK, iOS: [[[UIDevice currentDevice] systemVersion] floatValue]; |
+| dt | 字符串 | 必填 | 设备类型 可选值：phone,tablet,ipad,watch |
+| nt | 整型 | 必填 | 网络类型 Android: NetworkInfo.getType()  iOS: [[dataNetWorkItemView valueForKey:@"dataNetworkType"] integerValue] |
+| imgw | 整型 | 必填 | 表示需要的图片素材的宽(单位 像素) 缺省值为广告位的宽 |
+| imgh | 整型 | 必填 | 表示需要的图片素材的高(单位 像素) 缺省值为广告位的高 |
+| pn | 字符串 | 必填 | 当前宿主包名 |
+| sv | 字符串 | 必填 | SDK版本号 |
+| adnum | 整型 | 选填 | 期望adlist返回的广告数，默认为1 |
+| gaid | 字符串 | 选填 | Google Advertising Id（注：如能获取，尽量填上，不填对广告转化影响很大） |
+| aid | 字符串 | 选填 | 设备Android ID（注：如能获取，尽量填上，不填对广告转化影响很大）|
+| idfa | 字符串 | 选填 | 设备IDFA（注：如能获取，尽量填上，不填对广告转化影响很大） |
+| imei | 字符串 | 选填 | 设备IMEI |
+| keywords | 字符串 | 选填 | 搜索关键词字符串 |
 | icc | 字符串 | 选填 | ISO country code SIM卡国家代码  Android: TelephonyManager.getNetworkCountryIso()  iOS: [[NSLocale  currentLocale] objectForKey:NSLocaleCountryCode]; |
 | gp | 整型 | 选填 | 1:已安装google play 2:未安装google play |
 | dpd | 字符串 | 选填 | Device product |
