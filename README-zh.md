@@ -17,7 +17,7 @@ HTTP方法: `GET`
 
 | **字段名** | **类型** | **是否必填** | **字段含义** |
 |:--:|:--:|:--:|:--:|
-| token | 字符串 | 必填 | 广告位标识 |
+| token | 字符串 | 必填 | 广告位标识，cloudmobi为媒体分配的slot_id |
 | os | 字符串 | 必填 | 操作系统 可选值：Android,iOS |
 | osv | 浮点 | 必填 | Android: Build.VERSION.SDK, iOS: [[[UIDevice currentDevice] systemVersion] floatValue]; |
 | dt | 字符串 | 必填 | 设备类型 可选值：phone,tablet,ipad,watch |
