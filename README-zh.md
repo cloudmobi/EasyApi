@@ -1,4 +1,4 @@
-CloudTech 简易版API
+CloudTech广告实时API
 ===
 
 说明
