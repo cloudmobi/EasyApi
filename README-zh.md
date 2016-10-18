@@ -26,7 +26,6 @@ HTTP方法: `GET`
 | imgw | 整型 | 必填 | 表示需要的图片素材的宽（单位：像素）缺省值为广告位的宽 |
 | imgh | 整型 | 必填 | 表示需要的图片素材的高（单位：像素）缺省值为广告位的高 |
 | pn | 字符串 | 必填 | 当前宿主包名 |
-| sv | 字符串 | 必填 | SDK版本号 |
 | adnum | 整型 | 选填 | 期望ad_list返回的广告数，默认为1 |
 | gaid | 字符串 | 选填 | Google Advertising Id（注：如能获取，尽量填上，不填对广告转化影响很大） |
 | aid | 字符串 | 选填 | 设备Android ID（注：如能获取，尽量填上，不填对广告转化影响很大）|
@@ -36,7 +35,6 @@ HTTP方法: `GET`
 | keywords | 字符串 | 选填 | 搜索关键词字符串 |
 | icc | 字符串 | 选填 | ISO country code SIM卡国家代码  Android: TelephonyManager.getNetworkCountryIso()  iOS: [[NSLocale  currentLocale] objectForKey:NSLocaleCountryCode]; |
 | gp | 整型 | 选填 | 1:已安装google play, 2:未安装google play |
-| dpd | 字符串 | 选填 | Device product |
 | cn | 字符串 | 选填 | Carrier name 运营商名称 |
 | la | 浮点数 | 选填 | 纬度 |
 | lo | 浮点数 | 选填 | 经度 |
@@ -64,7 +62,6 @@ HTTP方法: `GET`
 | imgw | 整型 | 必填 | 表示需要的图片素材的宽（单位：像素）缺省值为广告位的宽 |
 | imgh | 整型 | 必填 | 表示需要的图片素材的高（单位：像素）缺省值为广告位的高 |
 | pn | 字符串 | 必填 | 当前宿主包名 |
-| sv | 字符串 | 必填 | SDK版本号 |
 | adnum | 整型 | 选填 | 期望ad_list返回的广告数，默认为1 |
 | gaid | 字符串 | 选填 | Google Advertising Id（注：如能获取，尽量填上，不填对广告转化影响很大） |
 | aid | 字符串 | 选填 | 设备Android ID（注：如能获取，尽量填上，不填对广告转化影响很大）|
@@ -74,7 +71,6 @@ HTTP方法: `GET`
 | keywords | 字符串 | 选填 | 搜索关键词字符串 |
 | icc | 字符串 | 选填 | ISO country code SIM卡国家代码  Android: TelephonyManager.getNetworkCountryIso()  iOS: [[NSLocale  currentLocale] objectForKey:NSLocaleCountryCode]; |
 | gp | 整型 | 选填 | 1:已安装google play 2:未安装google play |
-| dpd | 字符串 | 选填 | Device product |
 | cn | 字符串 | 选填 | Carrier name 运营商名称 |
 | la | 浮点数 | 选填 | 纬度 |
 | lo | 浮点数 | 选填 | 经度 |
@@ -118,11 +114,11 @@ API请求示例
 
 * Server2Server API:
 
-        http://api.cloudmobi.net:30001/api/v1/realtime/get?gaid=xxx&os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifi&sv=sv&clip=52.77.232.84&isdebug=1
+        http://api.cloudmobi.net:30001/api/v1/realtime/get?gaid=xxx&os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifiv&clip=52.77.232.84&isdebug=1
 
 * Client2Server API:
 
-        http://api.cloudmobi.net:30001/api/v1/realtime/m/get?gaid=xxx&os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifi&sv=sv&isdebug=1
+        http://api.cloudmobi.net:30001/api/v1/realtime/m/get?gaid=xxx&os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifi&isdebug=1
 
 JSON回复示例
 ---
