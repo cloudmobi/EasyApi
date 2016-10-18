@@ -1,10 +1,10 @@
 CloudTech Easy API
 ===
 
-Synopsis
+Instruction
 ---
 
-The Ads API provides HTTP GET method called by App's backend server. To guaranteed ads safe, IP white list must be provided by invokers.
+The real-time return ads provide APIs of Server2Server and Client2Server. They have same return format, but different parameters.
 
 API URI
 ---
@@ -19,7 +19,7 @@ Parameters
 ---
 | name | type | required | desc |
 |:--:|:--:|:--:|:--:|
-| token | string | required | identification of ad slot |
+| token | string | required | identification of ad slot. slot_id is provided by cloudmobi. |
 | os | string | required | Operation System, valid values: Android,iOS |
 | osv | float | required | for Android: `Build.VERSION.SDK`, for iOS: `[[[UIDevice currentDevice] systemVersion] floatValue];` |
 | dt | string | required | device type, valid values：phone,tablet,ipad,watch |
