@@ -25,24 +25,25 @@ Parameters
 | dt | string | required | device type, valid values：phone,tablet,ipad,watch |
 | nt | int | required | network type. for Android: `NetworkInfo.getType();` for iOS: `[[dataNetWorkItemView valueForKey:@"dataNetworkType"] integerValue]` |
 | clip | string | required | client ip |
-| imgw | int | required | width of the image creative(unit: pixel), width of slot by default |
-| imgh | int | required | height of the image creative(unit: pixel), height of slot by default |
+| imgw | int | required | width of the image(unit: pixel), the default value is width of slot |
+| imgh | int | required | height of the image(unit: pixel),  the default value is height of slot |
 | pn | string | required | package name |
-| sv | string | required | SDK version |
-| gaid | string | optional | Google Advertising Id |
-| aid | string | optional | Android ID of mobile device |
-| keywords | string | optional | search key-words|
-| idfa | string | optional | IDFA of mobile device |
+| adnum | int | optional | the number of ads backed from ad_list, the default value is 1 |
+| gaid | string | optional | Google Advertising Id(note:it's better to fill in,cause it has important influence on the conversion) |
+| aid | string | optional | Android ID of mobile device(note:it's better to fill in,cause it has important influence on the conversion) |
+| idfa | string | optional | IDFA of mobile device(note:it's better to fill in,cause it has important influence on the conversion) |
 | imei | string | optional | IMEI of mobile device |
+| ck_md5 | string | optional | the md5 value of cookie(note:At least one value of these five parameters(gaid, aid, idfa, imei, ck_md5) should be provided,or there comes no ads. |
+| keywords | string | optional | search key-words|
 | icc | string | optional | ISO country code(country code of SIM card). for Android: `TelephonyManager.getNetworkCountryIso()`  for iOS: `[[NSLocale  currentLocale] objectForKey:NSLocaleCountryCode];` |
-| gp | int | optional | 1:google play installed, 2:uninstall google play |
+| gp | int | optional | 1:google play is installed, 2: google play isn't installed |
 | dpd | string | optional | Device product |
 | cn | string | optional | Carrier name |
 | la | float | optional | latitude |
 | lo | float | optional | longitude |
 | tz | string | optional | time zone |
 | lang | string | optional | language of mobile system |
-| isdebug | int | optional | if it is debug data flow, set isdebug=1 |
+| isdebug | int | optional | if it is debug data flow, set isdebug=1. if not,set isdebug=0 |
 
 
 Response
