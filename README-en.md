@@ -119,7 +119,14 @@ Ad Object
 
 API Request Demo
 ---
-`http://api.cloudmobi.net:30001/api/v1/realtime/get?os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifi&sv=sv&clip=52.77.232.84&isdebug=1`
+
+* Server2Server API:
+
+        http://api.cloudmobi.net:30001/api/v1/realtime/get?gaid=xxx&os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifiv&clip=52.77.232.84&isdebug=1
+
+* Client2Server API:
+
+        http://api.cloudmobi.net:30001/api/v1/realtime/m/get?gaid=xxx&os=iOS&token=44&osv=0.1&dt=phone&nt=wifi&pn=wifi&isdebug=1
 
 
 JSON Response Demo
