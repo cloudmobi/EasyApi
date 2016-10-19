@@ -112,8 +112,8 @@ Ad Object
 | icon_size | string | required | size of icon, format: "${width}x${height}", e.g.: "1x1" |
 | title | string | required | title of the ad (app name) |
 | pkg_name | string | required | package name |
-| image | string | required | image source of creative |
-| image_size | string | required | size of creative picture, format: "${width}x${height}", eg: "300x250" |
+| image | string | required | ad image |
+| image_size | string | required | size of the ad materials, format: "${width}x${height}", eg: "300x250" |
 | desc | string | required | ad description |
 
 
