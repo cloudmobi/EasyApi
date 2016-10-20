@@ -106,8 +106,8 @@ Ad Object
 |:--:|:--:|:--:|:--:|
 | landing_type | int | required | 0:App Download, 1:Using default browser to load landing page, 2:you can use web-view to load landing page, 3:RSS 4:DeepLink( the value called from yeahmobi offline api is 0 or 1,the default value is 0 |
 | clk_url | string | required | click link |
-| imp_tks | array of string | optional | impression monitor link(when the ads impressed,the caller |
-| clk_tks | array of string | optional | click monitor link(when the ads clicked,the caller |
+| imp_tks | array of string | optional | impression monitor link(when the ads impressed,the caller needs to use asynchronous call to call the link |
+| clk_tks | array of string | optional | click monitor link(when the ads clicked,the caller needs to use asynchronous call to call the link |
 | icon | string | required | icon |
 | icon_size | string | required | size of icon, format: "${width}x${height}", e.g.: "1x1" |
 | title | string | required | title of the ad (app name) |
