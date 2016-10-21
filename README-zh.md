@@ -43,7 +43,7 @@ HTTP方法: `GET`
 | isdebug | 整型 | 选填 | 是否是测试流量，1表明是测试流量，0表明是线上实际流量 |
 
 
-Client 2 client API
+Client to server API
 ---
 
 URI: `http://api.cloudmobi.net:30001/api/v1/realtime/m/get`

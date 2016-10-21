@@ -48,7 +48,7 @@ Parameters
 | lang | string | optional | language of mobile system |
 | isdebug | int | optional | if it is debug data flow, set isdebug=1. if not,set isdebug=0 |
 
-Client to client API
+Client to server API
 ---
 API URI
 ---
