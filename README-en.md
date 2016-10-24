@@ -153,3 +153,10 @@ JSON Response Demo
     ]
 }
 ```
+FAQ
+---
+
+Q：Are impression and click still monitored if the arrays, `imp_tks`and`clk_tks`,are null ? 
+
+A：For simplifying your access work,when the real-time API requests ads in the background,the impression monitor call will be finished at the server-side. Redirection is used on click monitor. When the users click the ads, the server-side will record the click events and redirect the landing page from the user's to the ads'.
+
