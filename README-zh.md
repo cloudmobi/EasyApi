@@ -32,7 +32,7 @@ HTTP方法: `GET`
 | idfa | 字符串 | 选填 | 设备IDFA（注：如能获取，尽量填上，不填对广告转化影响很大） |
 | imei | 字符串 | 选填 | 设备IMEI |
 | ck_md5 | 字符串 | 选填 | cookie的md5值（注：gaid, aid, idfa, imei, ck_md5至少需要填一个，否则不会投放广告） |
-| keywords | 字符串 | 选填 | 搜索关键词字符串 |
+| keywords | 字符串 | 选填 | 搜索关键词字符串，多个关键词以逗号分隔。如果带有改参数，则返回广告标题或描述中有任一关键字的广告 |
 | icc | 字符串 | 选填 | ISO country code SIM卡国家代码  Android: TelephonyManager.getNetworkCountryIso()  iOS: [[NSLocale  currentLocale] objectForKey:NSLocaleCountryCode]; |
 | gp | 整型 | 选填 | 1:已安装google play, 2:未安装google play |
 | cn | 字符串 | 选填 | Carrier name 运营商名称 |
