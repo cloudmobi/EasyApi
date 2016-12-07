@@ -37,7 +37,8 @@ Parameters
 | idfa | string | optional | IDFA of mobile device(note:it's better to fill in,cause it has important influence on the conversion) |
 | imei | string | optional | IMEI of mobile device |
 | ck_md5 | string | optional | the md5 value of cookie(note:At least one value of these five parameters(gaid, aid, idfa, imei, ck_md5) should be provided,or there comes no ads. |
-| keywords | string | optional | search key-words|
+| keywords | string | optional | search key-words, split by `,` |
+| match | string | optional | if `keywords` is set, we search ads in both title and desc by default. If match is set as `title`, it means searching keywords only in title, `desc` does this rule as well |
 | icc | string | optional | ISO country code(country code of SIM card). for Android: `TelephonyManager.getNetworkCountryIso()`  for iOS: `[[NSLocale  currentLocale] objectForKey:NSLocaleCountryCode];` |
 | gp | int | optional | 1:google play is installed, 2: google play isn't installed |
 | dpd | string | optional | Device product |
