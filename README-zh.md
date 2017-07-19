@@ -57,17 +57,14 @@ HTTP方法: `GET`
 
 | **字段名** | **类型** | **是否一定有值** | **字段含义** |
 |:--:|:--:|:--:|:--:|
-| landing_type | int | 是 | 0：应用下载 1：外开落地页 2：可以使用webview打开链接 |
 | clk_url | 字符串 | 是 | 点击链接 |
 | imp_tks | 字符串数组 | 否 | *第三方曝光监测链接(当广告被曝光时，如果该数组不为空，调用者需要在webview中异步调用该监测链接)* |
 | clk_tks | 字符串数组 | 否 | *第三方点击监测链接(当广告被点击时，如果该数组不为空，调用者需要异步调用该监测链接)* |
 | icon | string | 是 | 广告图标 |
-| icon_size | string | 是 | 图标尺寸, 格式: "${width}x${height}", eg: "1x1" |
 | title | string | 是 | 广告标题(app名称) |
-| pkg_name | string | 是 | 包名 |
 | image | string | 是 | 广告图片 |
-| image_size | string | 是 | 素材尺寸，格式: "${width}x${height}", eg: "300x250" |
 | desc | string | 是 | 广告说明，大段文字 |
+| star | float32 | 是 | 广告评分 |
 
 
 API请求示例
@@ -84,18 +81,14 @@ JSON回复示例
     "err_no": 0,
     "ad_list": [
         {
-            "landing_type": 0,
+            "star": 4.5,
             "clk_url": "https://github.com",
             "imp_tks": ["imp_tk1", "imp_tk2"],
             "clk_tks": ["clk_tk1", "clk_tk2"],
-            "pkg_name": "net.cloudmobi.www",
             "icon": "http://www.matatransit.com/uploadedImages/Main_Site/Content/Maps_and_Schedules/Route_Schedules/route%2042%20icon.jpg",
-            "icon_size": "1x1",
             "title": "Answer",
             "image": "http://steven-universe.wikia.com/wiki/File:42_Answer.jpg",
-            "image_size": "300x250",
             "desc": "Welcome to use http://www.cloudmobi.net",
-            "button": "Install"
         }
     ]
 }
