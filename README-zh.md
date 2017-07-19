@@ -18,7 +18,7 @@ HTTP方法: `GET`
 | osv | 浮点 | 必填 | Android: Build.VERSION.SDK, iOS: [[[UIDevice currentDevice] systemVersion] floatValue]; |
 | dt | 字符串 | 必填 | 设备类型 可选值：phone,tablet,ipad,watch |
 | nt | 整型 | 必填 | 网络类型 Android: NetworkInfo.getType()  iOS: [[dataNetWorkItemView valueForKey:@"dataNetworkType"] integerValue] |
-| clip | 字符串 | 必填 | 客户端ip |
+| clip | 字符串 | 选填 | 客户端ip |
 | imgw | 整型 | 必填 | 表示需要的图片素材的宽（单位：像素）缺省值为广告位的宽 |
 | imgh | 整型 | 必填 | 表示需要的图片素材的高（单位：像素）缺省值为广告位的高 |
 | pn | 字符串 | 必填 | 当前宿主包名 |
