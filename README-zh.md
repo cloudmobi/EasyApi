@@ -9,7 +9,7 @@ CloudTech广告实时API
 Server to server API
 ---
 
-URI: `http://api.cloudmobi.net:30001/api/v1/realtime/get`
+URI: `http://api.cloudmobi.net/api/v1/realtime/get`
 
 HTTP方法: `GET`
 
@@ -99,7 +99,7 @@ HTTP方法: `GET`
 |:--:|:--:|:--:|:--:|
 | landing_type | int | 是 | 0：应用下载 1：外开落地页 2：可以使用webview打开链接 |
 | clk_url | 字符串 | 是 | 点击链接 |
-| imp_tks | 字符串数组 | 否 | *第三方曝光监测链接(当广告被曝光时，如果该数组不为空，调用者需要异步调用该监测链接)* |
+| imp_tks | 字符串数组 | 否 | *第三方曝光监测链接(当广告被曝光时，如果该数组不为空，调用者需要在webview中异步调用该监测链接)* |
 | clk_tks | 字符串数组 | 否 | *第三方点击监测链接(当广告被点击时，如果该数组不为空，调用者需要异步调用该监测链接)* |
 | icon | string | 是 | 广告图标 |
 | icon_size | string | 是 | 图标尺寸, 格式: "${width}x${height}", eg: "1x1" |
